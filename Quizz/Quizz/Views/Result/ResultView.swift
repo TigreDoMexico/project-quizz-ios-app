@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ResultView: View {
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
@@ -20,7 +22,6 @@ struct ResultView: View {
             }
             .navigationTitle("Resultado")
         }
-        
     }
 }
 

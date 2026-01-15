@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct QuizzView: View {
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                Text("Quizz")
+                Text("Quizz para \(appState.nomeUsuario)")
                     .font(.title)
                 
                 NavigationLink("Finalizar") {
@@ -26,3 +28,4 @@ struct QuizzView: View {
 #Preview {
     QuizzView()
 }
+
